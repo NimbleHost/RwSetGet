@@ -21,46 +21,46 @@ To harness the power or RapidWeaver's %pathto()% and %base_url% syntax in your R
 
 1. In the `<head>` of your index.html theme template file you need to load the rwget.js like you would any other theme resource using RapidWeaver's standard %pathto()% syntax. Where you store the file is up to you. For this example we assume the file is at the themes root level:
 	
-		`<script src="%pathto(rwget.js)%" charset="utf-8"></script>`
+		<script src="%pathto(rwget.js)%" charset="utf-8"></script>
 	
 2. Next we include the RwSet object in the `<head>` of the same index.html file. This sets the %pathto()% and %base_url% syntax as properties of the RwSet object. It doesn't matter whether this comes before or after loading the rwget.js file, it should work either way.
 	
-		`<script charset="utf-8">
+		<script charset="utf-8">
 			RwSet = {
 				pathto: "%pathto(javascript.js)%",
 				baseurl: "%base_url%"
 			};
-		</script>`
+		</script>
 	
 ## Usage ##
 
 Now the RwGet object is ready to be used in any JavaScript file where you need to reference another file, resource or known location. The RwGet object has two methods so far;
 
-	`RwGet.pathto(path, file)`
+	RwGet.pathto(path, file)
 	
 and
 
-	`RwGet.baseurl(path, file)`.
+	RwGet.baseurl(path, file)
 	
 The `.pathto()` method will lead directly to the root of the theme resources while `.baseurl()` leads to the user specified base url.
 	
 The "path" and "file" arguments in each method are optional and are currently just strings. All three examples would work,
 
-	`RwGet.pathto("folder/","file.ext")`
+	RwGet.pathto("folder/","file.ext")
 
 or
 
-	`RwGet.pathto("folder/file.ext")`
+	RwGet.pathto("folder/file.ext")
 	
 or
 
-	`RwGet.pathto() + "folder/files.ext"`
+	RwGet.pathto() + "folder/files.ext"
 	
 The first example becomes handy if you have an array of folders that contain an array of files in each:
 
-	`for (var i=0; i < Files.length; i++) {
+	for (var i=0; i < Files.length; i++) {
 		$('#thisID').load(RwGet.pathto(Folder,Files[i]));
-	};`
+	};
 
 Anyhow, I won't get into all the details of this can be used, you can surely think of several yourself. Anywhere that you would have used jsPathto is a prime candidate for using RwSetGet.
 
