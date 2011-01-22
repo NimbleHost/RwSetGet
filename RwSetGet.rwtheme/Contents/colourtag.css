@@ -1,0 +1,20 @@
+body {
+	color: %colour_body_text%;
+}
+
+#site_title {
+	color: %colour_site_title%;
+}
+
+#site_slogan {
+	color: %colour_site_slogan%;
+}
+
+a:link, a:visited {
+	color: %colour_link_text%;
+}
+
+a:hover, a:active {
+	color: %colour_link_hover%;
+}
+
