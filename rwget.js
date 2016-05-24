@@ -20,6 +20,8 @@ RwGet = {
             return (str + '').replace(re, '');
         };
         var jspathto = rtrim(RwSet.pathto, "javascript.js");
+        jspathto = jspathto.split('?');
+        jspathto = jspathto[0];
         if ((path !== undefined) && (file !== undefined)) {
             jspathto = jspathto + path + file;
         } else if (path !== undefined) {
