@@ -1,5 +1,6 @@
-# RwSetGet r0.1 #
+# RwSetGet r0.2 #
 ##### Created by Adam Merrifield, 01-22-11 10:34 #####
+##### Updated for RW7 by Jonathan Head, 05-23-16 22:00 #####
 
 ## About RwSetGet ##
 
