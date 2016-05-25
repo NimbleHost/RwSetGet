@@ -19,9 +19,10 @@ RwGet = {
             var re = new RegExp('[' + charlist + ']+$', 'g');
             return (str + '').replace(re, '');
         };
-        var jspathto = rtrim(RwSet.pathto, "javascript.js");
+        var jspathto = RwSet.pathto;
         jspathto = jspathto.split('?');
         jspathto = jspathto[0];
+        jspathto = rtrim(jspathto, "javascript.js");
         if ((path !== undefined) && (file !== undefined)) {
             jspathto = jspathto + path + file;
         } else if (path !== undefined) {
